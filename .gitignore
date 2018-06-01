@@ -22,6 +22,9 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
+## gitkeep
+!.gitkeep
+
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
