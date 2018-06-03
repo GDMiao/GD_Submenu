@@ -85,6 +85,8 @@ static NSString *const menu_cellId = @"menu_cell";
 		[self.view addSubview:self.popMenuV];
 	}
 	self.popMenuV.model = self.menuArray[indexPath.row];
+	// 判断当前menu cell 是否二次点击
+	// 同一 menu 二次点击情况下 clickRow = -1
 	if (self.popMenuV.clickRow != indexPath.row) {
 		self.popMenuV.clickRow = indexPath.row;
 		if (!self.popMenuV.isShow) {
@@ -94,7 +96,7 @@ static NSString *const menu_cellId = @"menu_cell";
 		self.popMenuV.clickRow = -1;
 		self.popMenuV.isShow = [self.popMenuV dissMenuShow];
 	}
-	
+	// 二级 menu 点击事件 block 回调
 	__weak typeof(self) weakself = self;
 	self.popMenuV.menuClickBlock = ^(id model) {
 		__strong typeof(self) strongself = weakself;
@@ -109,6 +111,7 @@ static NSString *const menu_cellId = @"menu_cell";
 }
 
 #pragma mark -- First Menu Scroll SubMenu Diss
+// 父级 menu 滚动时 子 menu 隐藏
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
 	if (self.popMenuV.isShow) {
