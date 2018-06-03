@@ -13,6 +13,8 @@
 		9A04461520C12E6E003CCA88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A04461420C12E6E003CCA88 /* Assets.xcassets */; };
 		9A04461820C12E6E003CCA88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A04461620C12E6E003CCA88 /* LaunchScreen.storyboard */; };
 		9A04461B20C12E6E003CCA88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A04461A20C12E6E003CCA88 /* main.m */; };
+		9A425C5D20C372A00096A1AC /* SubMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A425C5C20C372A00096A1AC /* SubMenuController.m */; };
+		9A425C6020C377EB0096A1AC /* PopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A425C5F20C377EB0096A1AC /* PopMenuView.m */; };
 		A7068695394005A7426AD494 /* libPods-Submenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 655A6F1C776DACCD267BC5B6 /* libPods-Submenu.a */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,10 @@
 		9A04461720C12E6E003CCA88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A04461920C12E6E003CCA88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A04461A20C12E6E003CCA88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9A425C5B20C372A00096A1AC /* SubMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubMenuController.h; sourceTree = "<group>"; };
+		9A425C5C20C372A00096A1AC /* SubMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubMenuController.m; sourceTree = "<group>"; };
+		9A425C5E20C377EB0096A1AC /* PopMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopMenuView.h; sourceTree = "<group>"; };
+		9A425C5F20C377EB0096A1AC /* PopMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopMenuView.m; sourceTree = "<group>"; };
 		DEB86CF09394CADB0BD13E87 /* Pods-Submenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Submenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Submenu/Pods-Submenu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +97,10 @@
 				9A04461620C12E6E003CCA88 /* LaunchScreen.storyboard */,
 				9A04461920C12E6E003CCA88 /* Info.plist */,
 				9A04461A20C12E6E003CCA88 /* main.m */,
+				9A425C5B20C372A00096A1AC /* SubMenuController.h */,
+				9A425C5C20C372A00096A1AC /* SubMenuController.m */,
+				9A425C5E20C377EB0096A1AC /* PopMenuView.h */,
+				9A425C5F20C377EB0096A1AC /* PopMenuView.m */,
 			);
 			name = AppMain;
 			sourceTree = "<group>";
@@ -196,8 +206,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A04461020C12E6B003CCA88 /* ViewController.m in Sources */,
+				9A425C5D20C372A00096A1AC /* SubMenuController.m in Sources */,
 				9A04461B20C12E6E003CCA88 /* main.m in Sources */,
 				9A04460D20C12E6B003CCA88 /* AppDelegate.m in Sources */,
+				9A425C6020C377EB0096A1AC /* PopMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
