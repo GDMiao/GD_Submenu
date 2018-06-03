@@ -13,6 +13,7 @@
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, copy)   NSArray * menuArray;
 @property (nonatomic, strong) PopMenuView *popMenuV;
+
 @end
 
 
@@ -84,16 +85,23 @@ static NSString *const menu_cellId = @"menu_cell";
 		[self.view addSubview:self.popMenuV];
 	}
 	self.popMenuV.model = self.menuArray[indexPath.row];
-	if (!self.popMenuV.isShow) {
-		self.popMenuV.isShow = [self.popMenuV popMenuShow];
+	if (self.popMenuV.clickRow != indexPath.row) {
+		self.popMenuV.clickRow = indexPath.row;
+		if (!self.popMenuV.isShow) {
+			self.popMenuV.isShow = [self.popMenuV popMenuShow];
+		}
+	} else {
+		self.popMenuV.clickRow = -1;
+		self.popMenuV.isShow = [self.popMenuV dissMenuShow];
 	}
+	
 	__weak typeof(self) weakself = self;
 	self.popMenuV.menuClickBlock = ^(id model) {
 		__strong typeof(self) strongself = weakself;
 		UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:strongself.menuArray[indexPath.row] message:(NSString *)model preferredStyle:UIAlertControllerStyleAlert];
 		UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
 			//响应事件
-			NSLog(@"action = %@", action);
+			//NSLog(@"action = %@", action);
 		}];
 		[alertVC addAction:defaultAction];
 		[strongself presentViewController:alertVC animated:YES completion:nil];
