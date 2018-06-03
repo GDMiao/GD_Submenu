@@ -17,7 +17,7 @@
 @property (nonatomic) BOOL isShow;
 @property (nonatomic) CGRect originFrame;
 @property (nonatomic) CGRect newFrame;
-
+@property (nonatomic, assign) NSInteger clickRow;
 - (BOOL)popMenuShow;
 - (BOOL)dissMenuShow;
 @end
