@@ -18,23 +18,27 @@ PODS:
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - Masonry (~> 1.0)
   - SDWebImage (~> 4.0)
+  - YYModel (~> 1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - Masonry
     - SDWebImage
+    - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: bd607fe6e256ca6a8f1e8741b101958d05dbd167
+PODFILE CHECKSUM: 567e1d6aa65b5b277e4252e54192ddd4507ab75c
 
 COCOAPODS: 1.5.2

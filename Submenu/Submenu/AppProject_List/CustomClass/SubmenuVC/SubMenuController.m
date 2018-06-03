@@ -8,6 +8,8 @@
 
 #import "SubMenuController.h"
 #import <Masonry/Masonry.h>
+#import "HTTPSRequestManager.h"
+#import "BaseModel.h"
 #import "PopMenuView.h"
 @interface SubMenuController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -32,6 +34,17 @@ static NSString *const menu_cellId = @"menu_cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+	//http://product.auto.163.com/auto/json/select/brandlist_v2.js
+	[HTTPSRequestManager HTTPS_Req:Req_Get urlStr:@"http://product.auto.163.com/auto/json/select/brandlist_v2.js" parameters:nil success:^(id object) {
+		NSLog(@"%@",object);
+
+	} failure:^(NSError *error) {
+		NSLog(@"%@",error);
+	}];
+	
+	
+	
 	[self _initTableView];
 }
 

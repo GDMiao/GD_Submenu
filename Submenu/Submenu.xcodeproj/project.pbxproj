@@ -13,8 +13,11 @@
 		9A04461520C12E6E003CCA88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A04461420C12E6E003CCA88 /* Assets.xcassets */; };
 		9A04461820C12E6E003CCA88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A04461620C12E6E003CCA88 /* LaunchScreen.storyboard */; };
 		9A04461B20C12E6E003CCA88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A04461A20C12E6E003CCA88 /* main.m */; };
-		9A425C5D20C372A00096A1AC /* SubMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A425C5C20C372A00096A1AC /* SubMenuController.m */; };
 		9A425C6020C377EB0096A1AC /* PopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A425C5F20C377EB0096A1AC /* PopMenuView.m */; };
+		9A425C6320C3C8B90096A1AC /* Brand.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A425C6220C3C8B90096A1AC /* Brand.m */; };
+		9A425CF220C3D24B0096A1AC /* HTTPSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A425CF020C3D24B0096A1AC /* HTTPSRequestManager.m */; };
+		9A425CF520C3D2710096A1AC /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A425CF420C3D2710096A1AC /* BaseModel.m */; };
+		9A425CFE20C3D30B0096A1AC /* SubMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A425CFC20C3D30A0096A1AC /* SubMenuController.m */; };
 		A7068695394005A7426AD494 /* libPods-Submenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 655A6F1C776DACCD267BC5B6 /* libPods-Submenu.a */; };
 /* End PBXBuildFile section */
 
@@ -31,10 +34,16 @@
 		9A04461720C12E6E003CCA88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A04461920C12E6E003CCA88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A04461A20C12E6E003CCA88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9A425C5B20C372A00096A1AC /* SubMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubMenuController.h; sourceTree = "<group>"; };
-		9A425C5C20C372A00096A1AC /* SubMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubMenuController.m; sourceTree = "<group>"; };
 		9A425C5E20C377EB0096A1AC /* PopMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopMenuView.h; sourceTree = "<group>"; };
 		9A425C5F20C377EB0096A1AC /* PopMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopMenuView.m; sourceTree = "<group>"; };
+		9A425C6120C3C8B90096A1AC /* Brand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Brand.h; sourceTree = "<group>"; };
+		9A425C6220C3C8B90096A1AC /* Brand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Brand.m; sourceTree = "<group>"; };
+		9A425CF020C3D24B0096A1AC /* HTTPSRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPSRequestManager.m; sourceTree = "<group>"; };
+		9A425CF120C3D24B0096A1AC /* HTTPSRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPSRequestManager.h; sourceTree = "<group>"; };
+		9A425CF320C3D2710096A1AC /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		9A425CF420C3D2710096A1AC /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		9A425CFC20C3D30A0096A1AC /* SubMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubMenuController.m; sourceTree = "<group>"; };
+		9A425CFD20C3D30A0096A1AC /* SubMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubMenuController.h; sourceTree = "<group>"; };
 		DEB86CF09394CADB0BD13E87 /* Pods-Submenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Submenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Submenu/Pods-Submenu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +89,7 @@
 		9A04460A20C12E6B003CCA88 /* Submenu */ = {
 			isa = PBXGroup;
 			children = (
+				9A425CAA20C3CCCF0096A1AC /* AppProject_List */,
 				9A04462120C12E8D003CCA88 /* AppMain */,
 			);
 			path = Submenu;
@@ -97,12 +107,113 @@
 				9A04461620C12E6E003CCA88 /* LaunchScreen.storyboard */,
 				9A04461920C12E6E003CCA88 /* Info.plist */,
 				9A04461A20C12E6E003CCA88 /* main.m */,
-				9A425C5B20C372A00096A1AC /* SubMenuController.h */,
-				9A425C5C20C372A00096A1AC /* SubMenuController.m */,
-				9A425C5E20C377EB0096A1AC /* PopMenuView.h */,
-				9A425C5F20C377EB0096A1AC /* PopMenuView.m */,
 			);
 			name = AppMain;
+			sourceTree = "<group>";
+		};
+		9A425CAA20C3CCCF0096A1AC /* AppProject_List */ = {
+			isa = PBXGroup;
+			children = (
+				9A425CDA20C3D13F0096A1AC /* BaseClass */,
+				9A425CD420C3D13F0096A1AC /* CustomClass */,
+				9A425CD620C3D13F0096A1AC /* CustomViews */,
+				9A425CD820C3D13F0096A1AC /* Resources */,
+				9A425CDC20C3D13F0096A1AC /* Support */,
+			);
+			path = AppProject_List;
+			sourceTree = "<group>";
+		};
+		9A425CD420C3D13F0096A1AC /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				9A425CF620C3D2D90096A1AC /* SubmenuVC */,
+			);
+			path = CustomClass;
+			sourceTree = "<group>";
+		};
+		9A425CD620C3D13F0096A1AC /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		9A425CD820C3D13F0096A1AC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9A425CDA20C3D13F0096A1AC /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				9A425CF320C3D2710096A1AC /* BaseModel.h */,
+				9A425CF420C3D2710096A1AC /* BaseModel.m */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		9A425CDC20C3D13F0096A1AC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				9A425CDD20C3D13F0096A1AC /* Category */,
+				9A425CDF20C3D13F0096A1AC /* Https */,
+				9A425CE120C3D13F0096A1AC /* Macro */,
+				9A425CE320C3D13F0096A1AC /* PCH */,
+				9A425CE520C3D13F0096A1AC /* Tool */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		9A425CDD20C3D13F0096A1AC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		9A425CDF20C3D13F0096A1AC /* Https */ = {
+			isa = PBXGroup;
+			children = (
+				9A425CF120C3D24B0096A1AC /* HTTPSRequestManager.h */,
+				9A425CF020C3D24B0096A1AC /* HTTPSRequestManager.m */,
+			);
+			path = Https;
+			sourceTree = "<group>";
+		};
+		9A425CE120C3D13F0096A1AC /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		9A425CE320C3D13F0096A1AC /* PCH */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PCH;
+			sourceTree = "<group>";
+		};
+		9A425CE520C3D13F0096A1AC /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		9A425CF620C3D2D90096A1AC /* SubmenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				9A425CFD20C3D30A0096A1AC /* SubMenuController.h */,
+				9A425CFC20C3D30A0096A1AC /* SubMenuController.m */,
+				9A425C5E20C377EB0096A1AC /* PopMenuView.h */,
+				9A425C5F20C377EB0096A1AC /* PopMenuView.m */,
+				9A425C6120C3C8B90096A1AC /* Brand.h */,
+				9A425C6220C3C8B90096A1AC /* Brand.m */,
+			);
+			path = SubmenuVC;
 			sourceTree = "<group>";
 		};
 		CFBB66C700E639598CA4030B /* Frameworks */ = {
@@ -206,10 +317,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A04461020C12E6B003CCA88 /* ViewController.m in Sources */,
-				9A425C5D20C372A00096A1AC /* SubMenuController.m in Sources */,
+				9A425CF220C3D24B0096A1AC /* HTTPSRequestManager.m in Sources */,
 				9A04461B20C12E6E003CCA88 /* main.m in Sources */,
+				9A425CF520C3D2710096A1AC /* BaseModel.m in Sources */,
+				9A425C6320C3C8B90096A1AC /* Brand.m in Sources */,
 				9A04460D20C12E6B003CCA88 /* AppDelegate.m in Sources */,
 				9A425C6020C377EB0096A1AC /* PopMenuView.m in Sources */,
+				9A425CFE20C3D30B0096A1AC /* SubMenuController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
