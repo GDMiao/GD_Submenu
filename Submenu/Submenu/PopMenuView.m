@@ -30,6 +30,7 @@ static NSString *const submenu_cellId = @"submenu_cell";
 	self = [super initWithFrame:frame];
 	if (self) {
 		_isShow = NO;
+		_clickRow = -1;
 		_originFrame = frame;
 		_newFrame = CGRectMake(60, 0, frame.size.width, frame.size.height);
 		[self _initTableView];
@@ -100,6 +101,7 @@ static NSString *const submenu_cellId = @"submenu_cell";
 	[UIView animateWithDuration:0.5 animations:^{
 		self.frame = self.originFrame;
 	}];
+	self.clickRow = -1;
 	return NO;
 }
 
@@ -117,6 +119,7 @@ static NSString *const submenu_cellId = @"submenu_cell";
 	if(recognizer.direction == UISwipeGestureRecognizerDirectionRight) {
 		NSLog(@"swipe right");
 		self.isShow = [self dissMenuShow];
+		
 	}
 }
 

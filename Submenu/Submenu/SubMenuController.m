@@ -93,7 +93,6 @@ static NSString *const menu_cellId = @"menu_cell";
 			self.popMenuV.isShow = [self.popMenuV popMenuShow];
 		}
 	} else {
-		self.popMenuV.clickRow = -1;
 		self.popMenuV.isShow = [self.popMenuV dissMenuShow];
 	}
 	// 二级 menu 点击事件 block 回调
